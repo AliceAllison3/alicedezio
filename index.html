@@ -12,7 +12,7 @@
     <style>
       :root {
         --b-width: 2px;
-        --mono: "Azeret Mono", monospace;
+        --mono: "Azeret Mono", "Noto Sans JP", monospace;
       }
 
       body {
@@ -521,7 +521,7 @@
       let currentSort = { key: "id", asc: true };
       function renderProjects() {
         const container = document.getElementById("project-list-container");
-        container.innerHTML = "";
+        container.insertAdjacentHTML('beforeend', `<div class="cell id-col">${nStr}</div><div class="cell"></div><div class="cell"></div><div class="cell"></div>`);
         projects.forEach((p) => {
           const rowWrapper = document.createElement("div");
           rowWrapper.className = "project-row";
