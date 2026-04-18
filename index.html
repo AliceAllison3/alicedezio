@@ -588,8 +588,7 @@
     let base = project.folderPath || "";
     project.images.forEach((img) => {
       let style = img.includes("_50") ? "width: 50%; margin: 0 auto;" : "width: 100%;";
-      imagesHtml += `<img src="${base}${img}" style="${style}" alt="${project.title}" onerror="this.style.display='none'">`;
-    });
+      imagesHtml += `<img src="${base}${img}" style="${style}" alt="Project Image" onerror="this.style.display='none'">`;    });
   }
   let finalInfoHtml = (project.institution || project.collaborators) ? 
     `<div class="project-meta-info" style="margin-top: 40px;">${project.institution || ""}${project.institution && project.year ? ", " + project.year : ""}<br>${project.collaborators || ""}</div>` : "";
