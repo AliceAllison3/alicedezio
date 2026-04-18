@@ -156,6 +156,11 @@
         position: sticky;
         top: 0;
         z-index: 10;
+        text-decoration: underline;
+        transition: opacity 0.2s;
+      }
+      .label-cell:hover {
+        opacity: 0.5;
       }
       .project-row {
         display: contents;
@@ -216,6 +221,9 @@
         border: var(--b-width) solid #000;
         display: block;
         width: 100%;
+      }
+      a:hover {
+        opacity: 0.5;
       }
 
       /* --- AGGIUNTE PER MOBILE --- */
